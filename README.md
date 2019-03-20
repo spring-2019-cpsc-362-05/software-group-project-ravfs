@@ -1,5 +1,7 @@
 # Req'd Services
 
+Google Drive Folder Link: https://docs.google.com/document/d/17Vwq2--E2E2owvVAu1F1b5JE1MNuO3LW6uaz7Tk72Ak/edit?usp=sharing
+
 
 Email Address
 
