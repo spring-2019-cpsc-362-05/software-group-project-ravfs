@@ -12,7 +12,12 @@ namespace Accounts {
 class Landlord : public Accounts::Account
 {
 public:
-    Landlord();
+    Landlord(const QString& firstName, const QString& lastName,
+             const QString& email, const QString& username, const QString& password,
+             const QString& mailingAddress, const QString& physicalAddress,
+             const QString& phoneNumber, qint64 accountID, Acct_type acct_type,
+             const QString& publicPhone, const QString& publicEmail,
+             const QString& publicWebsite, const std::vector<QString>& locationsOwned);
 
     QString getPublicPhone() const;
     void setPublicPhone(const QString &value);
@@ -35,10 +40,10 @@ public:
     // denyRequest()
 
 private:
-    QString publicPhone;
-    QString publicEmail;
-    QString publicWebsite;
-    std::vector<QString> locationsOwned;
+    QString m_publicPhone;
+    QString m_publicEmail;
+    QString m_publicWebsite;
+    std::vector<QString> m_locationsOwned;
 };
 
 } // namespace Accounts
