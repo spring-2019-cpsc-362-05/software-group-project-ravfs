@@ -30,7 +30,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QStackedWidget *stacked_widget;
     std::unique_ptr<Accounts::Account> account;
 };
 

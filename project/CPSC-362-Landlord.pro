@@ -26,6 +26,7 @@ CONFIG += c++11
 
 SOURCES += \
         account.cpp \
+        database_stuff.cpp \
         landlord.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -34,6 +35,7 @@ SOURCES += \
 
 HEADERS += \
         account.h \
+        database_stuff.h \
         landlord.h \
         mainwindow.h \
         serviceprovider.h \

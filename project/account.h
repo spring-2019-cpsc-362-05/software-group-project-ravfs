@@ -5,6 +5,8 @@
 
 namespace Accounts {
 
+enum class Acct_type : int {tenant = 1, landlord, serv_prov};
+
 class Account
 {
 public:
@@ -35,15 +37,22 @@ public:
 
     bool matchPassword(const QString &value);
 
-private:
-    QString firstName;
-    QString lastName;
-    QString email;
-    QString password;
-    QString mailingAddress;
-    QString physicalAddress;
-    QString phoneNumber;
-    qint64 accountID;
+    Acct_type getAcct_type() const;
+
+    QString getUsername() const;
+    void setUsername(const QString &value);
+
+protected:
+    QString m_firstName;
+    QString m_lastName;
+    QString m_email;
+    QString m_username;
+    QString m_password;
+    QString m_mailingAddress;
+    QString m_physicalAddress;
+    QString m_phoneNumber;
+    qint64 m_accountID;
+    Acct_type m_acct_type;
 };
 
 } // namespace Accounts

@@ -9,82 +9,97 @@ Account::Account()
 
 QString Account::getFirstName() const
 {
-    return firstName;
+    return m_firstName;
 }
 
 void Account::setFirstName(const QString &value)
 {
-    firstName = value;
+    m_firstName = value;
 }
 
 QString Account::getLastName() const
 {
-    return lastName;
+    return m_lastName;
 }
 
 void Account::setLastName(const QString &value)
 {
-    lastName = value;
+    m_lastName = value;
 }
 
 QString Account::getEmail() const
 {
-    return email;
+    return m_email;
 }
 
 void Account::setEmail(const QString &value)
 {
-    email = value;
+    m_email = value;
 }
 
 void Account::setPassword(const QString &value)
 {
-    password = value;
+    m_password = value;
 }
 
 QString Account::getMailingAddress() const
 {
-    return mailingAddress;
+    return m_mailingAddress;
 }
 
 void Account::setMailingAddress(const QString &value)
 {
-    mailingAddress = value;
+    m_mailingAddress = value;
 }
 
 QString Account::getPhysicalAddress() const
 {
-    return physicalAddress;
+    return m_physicalAddress;
 }
 
 void Account::setPhysicalAddress(const QString &value)
 {
-    physicalAddress = value;
+    m_physicalAddress = value;
 }
 
 QString Account::getPhoneNumber() const
 {
-    return phoneNumber;
+    return m_phoneNumber;
 }
 
 void Account::setPhoneNumber(const QString &value)
 {
-    phoneNumber = value;
+    m_phoneNumber = value;
 }
 
 qint64 Account::getAccountID() const
 {
-    return accountID;
+    return m_accountID;
 }
 
 void Account::setAccountID(const qint64 &value)
 {
-    accountID = value;
+    m_accountID = value;
 }
 
 bool Account::matchPassword(const QString &value)
 {
-    return value == password;
+    return value == m_password;
+}
+
+Acct_type Account::getAcct_type() const
+{
+    return m_acct_type;
+}
+
+QString Account::getUsername() const
+{
+    return m_username;
+}
+
+void Account::setUsername(const QString &username)
+{
+    m_username = username;
 }
 
 } // namespace Accounts
