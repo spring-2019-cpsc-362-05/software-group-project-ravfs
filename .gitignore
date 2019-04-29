@@ -1,2 +1,4 @@
 *.pro.user
 project/**/*.pro.user
+build-CPSC-362-Landlord-Desktop_Qt_5_12_2_MinGW_32_bit-Debug/**
+*.bak
