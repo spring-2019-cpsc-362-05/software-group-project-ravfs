@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>966</width>
+    <height>413</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sign In</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_sign_in">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Email</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_username"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Password</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_password"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_pass_incorrect">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_sign_in">
+             <property name="text">
+              <string>Sign In</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_create_account">
+             <property name="text">
+              <string>Create Account</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+          <zorder>pushButton_create_account</zorder>
+          <zorder>label</zorder>
+          <zorder>lineEdit_username</zorder>
+          <zorder>label_2</zorder>
+          <zorder>lineEdit_password</zorder>
+          <zorder>label_pass_incorrect</zorder>
+          <zorder>pushButton_sign_in</zorder>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_tenant">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QTabWidget" name="Tenant_tabs">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="Tenant_view_requests_tab">
+           <attribute name="title">
+            <string>View Requests</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="Tenant_request_service_tab">
+           <attribute name="title">
+            <string>Request Service</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="Tenant_acct_settings_tab">
+           <attribute name="title">
+            <string>Account Settings</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_landlord">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTabWidget" name="Landlord_tabs">
+          <property name="currentIndex">
+           <number>3</number>
+          </property>
+          <widget class="QWidget" name="Landlord_Requests_tab">
+           <attribute name="title">
+            <string>Requests</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="Landlord_view_tenants_tab">
+           <attribute name="title">
+            <string>Tenants</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="Landlord_serv_prov_tab">
+           <attribute name="title">
+            <string>Service Providers</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="Landlord_acct_settings_tab">
+           <attribute name="title">
+            <string>Account Settings</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_service_provider">
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="Serv_prov_requests_tab">
+           <attribute name="title">
+            <string>Requests</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="Serv_prov_claims_tab">
+           <attribute name="title">
+            <string>Claims</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="Serv_prov_acct_settings_tab">
+           <attribute name="title">
+            <string>Account Settings</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>966</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
