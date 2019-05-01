@@ -30,6 +30,7 @@ SOURCES += \
         landlord.cpp \
         main.cpp \
         mainwindow.cpp \
+        request.cpp \
         serviceprovider.cpp \
         tenant.cpp
 
@@ -38,6 +39,7 @@ HEADERS += \
         database_stuff.h \
         landlord.h \
         mainwindow.h \
+        request.h \
         serviceprovider.h \
         tenant.h
 
