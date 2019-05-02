@@ -6,6 +6,7 @@
 #include "tenant.h"
 #include "serviceprovider.h"
 #include "createaccount.h"
+#include "mainmenu.h"
 
 #include <memory>
 
@@ -38,6 +39,8 @@ private:
     Ui::MainWindow *ui;
     std::unique_ptr<Accounts::Account> account;
     createAccount newAccount;
+    viewRequests vRequests;
+    mainMenu mnMenu;
 };
 
 #endif // MAINWINDOW_H

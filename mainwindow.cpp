@@ -27,6 +27,7 @@ void MainWindow::on_pushButton_sign_in_clicked()
 {
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
+    QString type;
     // I was having a problem where if you put in a email that didnt exist it would return a blank password and
     // the logic would consider it corrent (password = "" and the query would return "" so they were =, this if statement prevents that
     if(password == "")
@@ -36,7 +37,7 @@ void MainWindow::on_pushButton_sign_in_clicked()
     }
 
     QSqlDatabase ravfsdb = QSqlDatabase::addDatabase("QSQLITE");
-    ravfsdb.setDatabaseName("C:/Users/bravi/OneDrive/Desktop/Vinny/CSPC 362/sqlite-tools-win32-x86-3280000/sqlite-tools-win32-x86-3280000/ravfs.db");
+    ravfsdb.setDatabaseName(QDir::currentPath() + "/ravfs.db");
 
     if(!ravfsdb.open())
     {
@@ -48,7 +49,15 @@ void MainWindow::on_pushButton_sign_in_clicked()
     if( password == rec.record(0).value("password").toString())
     {
         //do stuff
-        ui->label->setText("logging in . . .");
+        rec.setQuery("select type from account a where a.email = '" + username + "'");
+        type = rec.record(0).value("type").toString();
+        mnMenu.setEmail(username);
+        mnMenu.setType(type);
+        mnMenu.setUpMainPage();
+        mnMenu.show();
+        /*vRequests.setRequestTable(username, type);
+        vRequests.show();
+        vRequests.setRequestTable(username, type);*/
 
     }
     else

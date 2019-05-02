@@ -33,11 +33,14 @@ SOURCES += \
         createrequest.cpp \
         createtenant.cpp \
         database_stuff.cpp \
+        editrequest.cpp \
         landlord.cpp \
         main.cpp \
+        mainmenu.cpp \
         mainwindow.cpp \
         serviceprovider.cpp \
-        tenant.cpp
+        tenant.cpp \
+        viewrequests.cpp
 
 HEADERS += \
         account.h \
@@ -47,16 +50,22 @@ HEADERS += \
         createrequest.h \
         createtenant.h \
         database_stuff.h \
+        editrequest.h \
         landlord.h \
+        mainmenu.h \
         mainwindow.h \
         serviceprovider.h \
-        tenant.h
+        tenant.h \
+        viewrequests.h
 
 FORMS += \
         createaccount.ui \
         createclaim.ui \
         createrequest.ui \
-        mainwindow.ui
+        editrequest.ui \
+        mainmenu.ui \
+        mainwindow.ui \
+        viewrequests.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -64,3 +73,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 QT += sql
+
+DISTFILES +=
