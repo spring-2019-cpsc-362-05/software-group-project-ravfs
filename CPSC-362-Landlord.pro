@@ -55,9 +55,7 @@ HEADERS += \
 FORMS += \
         createaccount.ui \
         createclaim.ui \
-        createlandlord.ui \
         createrequest.ui \
-        createtenant.ui \
         mainwindow.ui
 
 # Default rules for deployment.

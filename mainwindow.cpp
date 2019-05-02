@@ -27,32 +27,38 @@ void MainWindow::on_pushButton_sign_in_clicked()
 {
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
-
-    QSqlDatabase testdb = QSqlDatabase::addDatabase("QSQLITE");
-    testdb.setDatabaseName("C:/Users/bravi/OneDrive/Desktop/Vinny/CSPC 362/sqlite-tools-win32-x86-3280000/sqlite-tools-win32-x86-3280000/ravfs.db");
-
-    if(testdb.open())
+    // I was having a problem where if you put in a email that didnt exist it would return a blank password and
+    // the logic would consider it corrent (password = "" and the query would return "" so they were =, this if statement prevents that
+    if(password == "")
     {
-        /*QSqlQueryModel * model = new QSqlQueryModel();
+        password = "urhffhsjkrhgfjlksh";
 
-        QSqlQuery * qry = new QSqlQuery(testdb);
-        qry->prepare("select * from account");
-        qry->exec();
-        model->setQuery(*qry);
-        ui->tableView->setModel(model);
-        ui->label->setText(qry->value(1).toString());*/
     }
 
-    //QSqlQuery qry(testdb);
-    //qry.exec("select * from account");
-    //ui->label->setText(qry.value(0).toString());
+    QSqlDatabase ravfsdb = QSqlDatabase::addDatabase("QSQLITE");
+    ravfsdb.setDatabaseName("C:/Users/bravi/OneDrive/Desktop/Vinny/CSPC 362/sqlite-tools-win32-x86-3280000/sqlite-tools-win32-x86-3280000/ravfs.db");
 
-    /*if (DB_stuff::account_exists(username, password)) {
-        account = DB_stuff::get_account(username, password);
-        ui->stackedWidget->setCurrentIndex(static_cast<int>(account->getAcct_type()));
-    } else {
-        ui->label_pass_incorrect->setText(QString("Incorrect username or password."));
-    }*/
+    if(!ravfsdb.open())
+    {
+
+    }
+
+    QSqlQueryModel rec;
+    rec.setQuery("select password from account a where a.email = '" + username + "'");
+    if( password == rec.record(0).value("password").toString())
+    {
+        //do stuff
+        ui->label->setText("logging in . . .");
+
+    }
+    else
+    {
+        //incorrect email password combo
+         ui->label->setText("incorrect email password combination");
+
+    }
+
+    ravfsdb.close();
 }
 
 void MainWindow::on_pushButton_create_account_clicked()
