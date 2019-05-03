@@ -37,7 +37,7 @@ void MainWindow::on_pushButton_sign_in_clicked()
 
 void MainWindow::on_pushButton_create_account_clicked()
 {
-
+    acc.show();
 }
 
 void MainWindow::on_pushButton_clicked()

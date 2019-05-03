@@ -6,6 +6,7 @@
 #include "tenant.h"
 #include "serviceprovider.h"
 #include "createclaim.h"
+#include "createaccount.h"
 
 #include <memory>
 
@@ -36,6 +37,7 @@ private:
     Ui::MainWindow *ui;
     std::unique_ptr<Accounts::Account> account;
     createClaim claim;
+    createAccount acc;
 };
 
 #endif // MAINWINDOW_H

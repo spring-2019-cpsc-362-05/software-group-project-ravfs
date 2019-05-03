@@ -145,42 +145,19 @@
         <item>
          <widget class="QTabWidget" name="ServiceProvider_tabs">
           <property name="currentIndex">
-           <number>1</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="Serv_prov_requests_tab">
            <attribute name="title">
             <string>Requests</string>
            </attribute>
-           <widget class="QLabel" name="LocationLabel">
-            <property name="geometry">
-             <rect>
-              <x>10</x>
-              <y>10</y>
-              <width>71</width>
-              <height>31</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Locations</string>
-            </property>
-           </widget>
-           <widget class="QComboBox" name="LocationBox">
-            <property name="geometry">
-             <rect>
-              <x>80</x>
-              <y>10</y>
-              <width>86</width>
-              <height>30</height>
-             </rect>
-            </property>
-           </widget>
            <widget class="QListWidget" name="Reqd_serv_list">
             <property name="geometry">
              <rect>
               <x>15</x>
-              <y>51</y>
+              <y>11</y>
               <width>501</width>
-              <height>271</height>
+              <height>311</height>
              </rect>
             </property>
            </widget>
