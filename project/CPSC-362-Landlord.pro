@@ -26,22 +26,27 @@ CONFIG += c++11
 
 SOURCES += \
         account.cpp \
+        createclaim.cpp \
         database_stuff.cpp \
         landlord.cpp \
         main.cpp \
         mainwindow.cpp \
         serviceprovider.cpp \
-        tenant.cpp
+        tenant.cpp  \
+        createclaim.cpp
 
 HEADERS += \
         account.h \
+        createclaim.h \
         database_stuff.h \
         landlord.h \
         mainwindow.h \
         serviceprovider.h \
-        tenant.h
+        tenant.h    \
+        createclaim.h
 
 FORMS += \
+        createclaim.ui \
         mainwindow.ui
 
 # Default rules for deployment.

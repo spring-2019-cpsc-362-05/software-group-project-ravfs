@@ -195,38 +195,25 @@
               <x>35</x>
               <y>11</y>
               <width>461</width>
-              <height>331</height>
+              <height>281</height>
              </rect>
             </property>
             <attribute name="headerDefaultSectionSize">
              <number>150</number>
             </attribute>
-            <column>
-             <property name="text">
-              <string>Tenant</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>Status</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>Create Claim</string>
-             </property>
-            </column>
-            <item>
-             <property name="text">
-              <string>01</string>
-             </property>
-             <property name="text">
-              <string>Status Drop Down</string>
-             </property>
-             <property name="flags">
-              <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
-             </property>
-            </item>
+           </widget>
+           <widget class="QPushButton" name="pushButton">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>320</y>
+              <width>171</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Create a claim</string>
+            </property>
            </widget>
           </widget>
           <widget class="QWidget" name="Serv_prov_acct_settings_tab">
@@ -248,7 +235,7 @@
      <x>0</x>
      <y>0</y>
      <width>576</width>
-     <height>27</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

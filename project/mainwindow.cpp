@@ -39,3 +39,8 @@ void MainWindow::on_pushButton_create_account_clicked()
 {
 
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    claim.show();
+}

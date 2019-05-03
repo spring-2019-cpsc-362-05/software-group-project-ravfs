@@ -24,7 +24,7 @@ std::unique_ptr<Accounts::Account> DB_stuff::get_account(const QString& username
                 new Accounts::Tenant("Franky", "Daniel", "fpdaniel2@csu.fullerton.edu",
                                      username, password, "1234 Fake Mailing Address",
                                      "1234 Fake Phys Address", "(909) 555-0121", 12345,
-                                     Accounts::Acct_type::tenant, "My Prim. Location", "My LL Key"));
+                                     Accounts::Acct_type::serv_prov, "My Prim. Location", "My LL Key"));
 //    return std::unique_ptr<Accounts::Account>(
 //                new Accounts::Landlord("Franky", "Daniel", "fpdaniel2@csu.fullerton.edu",
 //                                       username, password, "1234 Fake Mailing Address",
