@@ -26,37 +26,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        account.cpp \
         createaccount.cpp \
         createclaim.cpp \
-        createlandlord.cpp \
         createrequest.cpp \
-        createtenant.cpp \
-        database_stuff.cpp \
         editrequest.cpp \
-        landlord.cpp \
         main.cpp \
         mainmenu.cpp \
         mainwindow.cpp \
-        serviceprovider.cpp \
-        tenant.cpp \
-        viewrequests.cpp
+        updateaccount.cpp \
+        viewclaims.cpp \
+        viewrequests.cpp \
+        viewtenants.cpp
 
 HEADERS += \
-        account.h \
         createaccount.h \
         createclaim.h \
-        createlandlord.h \
         createrequest.h \
-        createtenant.h \
-        database_stuff.h \
         editrequest.h \
-        landlord.h \
         mainmenu.h \
         mainwindow.h \
-        serviceprovider.h \
-        tenant.h \
-        viewrequests.h
+        updateaccount.h \
+        viewclaims.h \
+        viewrequests.h \
+        viewtenants.h
 
 FORMS += \
         createaccount.ui \
@@ -65,7 +57,10 @@ FORMS += \
         editrequest.ui \
         mainmenu.ui \
         mainwindow.ui \
-        viewrequests.ui
+        updateaccount.ui \
+        viewclaims.ui \
+        viewrequests.ui \
+        viewtenants.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

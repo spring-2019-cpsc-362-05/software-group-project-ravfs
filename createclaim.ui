@@ -18,7 +18,7 @@
     <rect>
      <x>84</x>
      <y>20</y>
-     <width>71</width>
+     <width>101</width>
      <height>20</height>
     </rect>
    </property>
@@ -50,16 +50,6 @@
    </property>
    <property name="text">
     <string>invoice:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>20</y>
-     <width>141</width>
-     <height>22</height>
-    </rect>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">

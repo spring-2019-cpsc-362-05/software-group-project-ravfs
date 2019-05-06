@@ -29,11 +29,8 @@ createAccount::~createAccount()
 void createAccount::on_pushButton_clicked()
 {
     QSqlDatabase ravfsdb = QSqlDatabase::addDatabase("QSQLITE");
-    ravfsdb.setDatabaseName("C:/Users/bravi/OneDrive/Desktop/Vinny/CSPC 362/sqlite-tools-win32-x86-3280000/sqlite-tools-win32-x86-3280000/ravfs.db");
-    if(ravfsdb.open())
-    {
-        ui->label->setText("open");
-    }
+    ravfsdb.setDatabaseName(QDir::currentPath() + "/ravfs.db");
+    ravfsdb.open();
     QSqlQuery * qry = new QSqlQuery(ravfsdb);
 
     QString firstName = ui->lineEdit_firstName->text();
@@ -62,7 +59,9 @@ void createAccount::on_pushButton_clicked()
         qry->prepare("insert into account (firstName,lastName, email, password, Address, phone, type) values "
                      "('" + firstName + "','" + lastName + "','" + email + "','" + password + "','" + address + "','" + phoneNumber + "','" + type + "')");
         qry->exec();
-
+        /*ui->textEdit_servicesProvided->setText("insert into account (firstName,lastName, email, password, Address, phone, type) values "
+                                               "('" + firstName + "','" + lastName + "','" + email + "','" + password + "','" + address + "','" + phoneNumber + "','" + type + "')");
+        */
         qry->prepare("insert into tenant (tEmail, lEmail ) values"
                      "('" + email + "','" + lEmail + "')");
 

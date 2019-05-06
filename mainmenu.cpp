@@ -16,7 +16,7 @@ mainMenu::~mainMenu()
 
 void mainMenu::setEmail(QString acctEmail)
 {
-    email = acctEmail;
+    actEmail = acctEmail;
 }
 
 void mainMenu::setType(QString acctType)
@@ -45,6 +45,36 @@ void mainMenu::setUpMainPage()
 
 void mainMenu::on_pushButton_viewReq_clicked()
 {
-    viewReq.setRequestTable(email, type);
+    viewReq.setRequestTable(actEmail, type);
     viewReq.show();
+}
+
+void mainMenu::on_pushButton_createReq_clicked()
+{
+    crtReq.setEmail(actEmail);
+    crtReq.setUpSPTable();
+    crtReq.show();
+}
+
+void mainMenu::on_pushButton_viewTenants_clicked()
+{
+    viewTen.setUpEmail(actEmail);
+    viewTen.setUpTable();
+    viewTen.show();
+}
+
+void mainMenu::on_pushButton_viewClaims_clicked()
+{
+    viewClms.setEmail(actEmail);
+    viewClms.setType(type);
+    viewClms.setUpTable();
+    viewClms.show();
+}
+
+void mainMenu::on_pushButton_acctSettings_clicked()
+{
+    udtAct.setEmail(actEmail);
+    udtAct.setType(type);
+    udtAct.setUpPage();
+    udtAct.show();
 }

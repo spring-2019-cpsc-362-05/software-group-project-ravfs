@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>324</height>
+    <width>836</width>
+    <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>80</y>
+     <y>90</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -39,22 +39,22 @@
     <string>Notes:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_kindOFService">
    <property name="geometry">
     <rect>
      <x>192</x>
      <y>40</y>
-     <width>151</width>
+     <width>251</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="textEdit_notes">
    <property name="geometry">
     <rect>
      <x>190</x>
      <y>90</y>
-     <width>171</width>
+     <width>251</width>
      <height>121</height>
     </rect>
    </property>
@@ -62,7 +62,7 @@
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>190</x>
      <y>240</y>
      <width>95</width>
      <height>20</height>
@@ -75,7 +75,7 @@
   <widget class="QRadioButton" name="radioButton_2">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>320</x>
      <y>240</y>
      <width>131</width>
      <height>20</height>
@@ -88,14 +88,60 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>280</y>
+     <x>230</x>
+     <y>400</y>
      <width>141</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
     <string>Submit Request</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Assign provider (Email) :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_assignedProvider">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>290</y>
+     <width>251</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>80</y>
+     <width>311</width>
+     <height>371</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>40</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>List of Service Providers</string>
    </property>
   </widget>
  </widget>

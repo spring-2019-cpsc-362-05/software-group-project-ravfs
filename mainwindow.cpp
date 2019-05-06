@@ -1,8 +1,6 @@
-#include "database_stuff.h"
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "testf.h"
 
 #include <QString>
 #include <QSql>
@@ -10,12 +8,9 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow),
-    //stacked_widget(new QStackedWidget),
-    account(nullptr)
+    ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
 }
 
 MainWindow::~MainWindow()
@@ -39,10 +34,7 @@ void MainWindow::on_pushButton_sign_in_clicked()
     QSqlDatabase ravfsdb = QSqlDatabase::addDatabase("QSQLITE");
     ravfsdb.setDatabaseName(QDir::currentPath() + "/ravfs.db");
 
-    if(!ravfsdb.open())
-    {
-
-    }
+    ravfsdb.open();
 
     QSqlQueryModel rec;
     rec.setQuery("select password from account a where a.email = '" + username + "'");
@@ -55,9 +47,7 @@ void MainWindow::on_pushButton_sign_in_clicked()
         mnMenu.setType(type);
         mnMenu.setUpMainPage();
         mnMenu.show();
-        /*vRequests.setRequestTable(username, type);
-        vRequests.show();
-        vRequests.setRequestTable(username, type);*/
+
 
     }
     else

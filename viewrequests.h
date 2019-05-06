@@ -6,6 +6,7 @@
 #include <QSqlDatabase>
 #include <QString>
 #include <editrequest.h>
+#include <createclaim.h>
 
 namespace Ui {
 class viewRequests;
@@ -32,6 +33,7 @@ private:
     QString email;
     QString type;
     editRequest editr;
+    createClaim crtClaim;
 };
 
 #endif // VIEWREQUESTS_H

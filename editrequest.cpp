@@ -113,7 +113,7 @@ void editRequest::setUpPage()
 void editRequest::setUpTable()
 {
     QSqlDatabase ravfsdb = QSqlDatabase::addDatabase("QSQLITE");
-    ravfsdb.setDatabaseName("C:/Users/bravi/OneDrive/Desktop/Vinny/CSPC 362/sqlite-tools-win32-x86-3280000/sqlite-tools-win32-x86-3280000/ravfs.db");
+    ravfsdb.setDatabaseName(QDir::currentPath() + "/ravfs.db");
     ravfsdb.open();
 
     QSqlQueryModel * model = new QSqlQueryModel();
@@ -134,7 +134,7 @@ void editRequest::setUpTable()
 void editRequest::on_pushButton_clicked()
 {
     QSqlDatabase ravfsdb = QSqlDatabase::addDatabase("QSQLITE");
-    ravfsdb.setDatabaseName("C:/Users/bravi/OneDrive/Desktop/Vinny/CSPC 362/sqlite-tools-win32-x86-3280000/sqlite-tools-win32-x86-3280000/ravfs.db");
+    ravfsdb.setDatabaseName(QDir::currentPath() + "/ravfs.db");
     ravfsdb.open();
 
     QSqlQuery * qry = new QSqlQuery(ravfsdb);

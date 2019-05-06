@@ -1,10 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "account.h"
-#include "landlord.h"
-#include "tenant.h"
-#include "serviceprovider.h"
 #include "createaccount.h"
 #include "mainmenu.h"
 
@@ -37,7 +33,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    std::unique_ptr<Accounts::Account> account;
     createAccount newAccount;
     viewRequests vRequests;
     mainMenu mnMenu;
